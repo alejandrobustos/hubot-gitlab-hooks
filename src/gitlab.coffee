@@ -60,6 +60,9 @@ module.exports = (robot) ->
     url.replace(/(\/[0-9a-f]{9})[0-9a-f]+$/, '$1')
 
   handler = (type, req, res) ->
+    console.log(type)
+    console.log(req)
+    console.log(res)
     query = querystring.parse(url.parse(req.url).query)
     hook = req.body
 
